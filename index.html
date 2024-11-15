@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classroom</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      color: #f5f5f5;
+      background: linear-gradient(135deg, #333333, #444444);
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      color: #FF69B4;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      margin-top: 10px;
+    }
+    
+    .search-bar {
+      display: block;
+      width: 60%;
+      margin: 20px auto;
+      padding: 10px;
+      font-size: 1.2em;
+      border: 2px solid #FF69B4;
+      border-radius: 8px;
+      background-color: #222;
+      color: #f5f5f5;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .game-button {
+      padding: 15px 30px;
+      font-size: 1.5em;
+      background-color: #222;
+      color: #FF69B4;
+      border: 2px solid #FF69B4;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(255, 105, 180, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .game-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 24px rgba(255, 105, 180, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <h1>More Coming Soon (Some Removed Because Dependent on Neocities <br>
+  Pressung B on Games Sends to Old Link, Will Fix Soon 
+  </h1>
+  <input type="text" id="search-bar" class="search-bar" placeholder="Search for a game..." oninput="filterGames()">
+  <div class="button-container" id="games-container">
+    <a href="https://awesomest.pages.dev/3kh0-assets-main-slope/3kh0-assets-main-slope/slope" class="game-button">Slope</a>
+    <a href="https://bit-ao9.pages.dev/3kh0-assets-main-bitlife/3kh0-assets-main-bitlife/bitlife" class="game-button">Bitlife (for Morgan)</a>
+    <a href="https://doom-6bc.pages.dev/3kh0-assets-main-getaway-shootout/3kh0-assets-main-getaway-shootout/getaway-shootout" class="game-button">Getaway Shootout</a>
+    <a href="https://balloon-3hi.pages.dev/3kh0-assets-main-btd5/3kh0-assets-main-btd5/btd5" class="game-button">Bloons TD 5</a>
+    <a href="https://moto1.pages.dev/3kh0-assets-main-motox3m-pool/3kh0-assets-main-motox3m-pool/motox3m-pool" class="game-button">Moto X3M Pool Party</a>
+    <a href="https://moto2-2ff.pages.dev/3kh0-assets-main-motox3m-spooky/3kh0-assets-main-motox3m-spooky/motox3m-spooky" class="game-button">Moto X3M Spooky Land</a>
+    <a href="https://moto3-b0g.pages.dev/3kh0-assets-main-motox3m-winter/3kh0-assets-main-motox3m-winter/motox3m-winter" class="game-button">Moto X3M Winter</a>
+    <a href="https://moto4.pages.dev/3kh0-assets-main-motox3m/3kh0-assets-main-motox3m/motox3m" class="game-button">Moto X3M</a>
+    <a href="https://knife-1ay.pages.dev/3kh0-assets-main-knife-master/3kh0-assets-main-knife-master/knife-master" class="game-button">Knife Master</a>
+    <a href="https://mc-663.pages.dev/3kh0-assets-main-minecraft-18/3kh0-assets-main-minecraft-18/minecraft-18" class="game-button">Minecraft (Kind of Broken)</a>
+    <a href="https://craftmine-ey7.pages.dev/3kh0-assets-main-minecraft-15/3kh0-assets-main-minecraft-15/minecraft-15" class="game-button">Minecraft (with Singleplayer)</a>
+    <a href="https://backrooms-9ar.pages.dev/3kh0-assets-main-backrooms/3kh0-assets-main-backrooms/backrooms" class="game-button">Backrooms</a>
+    <a href="https://hill-4pi.pages.dev/3kh0-assets-main-draw-the-hill/3kh0-assets-main-draw-the-hill/draw-the-hill" class="game-button">Draw the Hill</a>
+    <a href="https://rocket-5wi.pages.dev/3kh0-assets-main-Rocket-League/3kh0-assets-main-Rocket-League/Rocket-League" class="game-button">Rocket Soccer</a>
+    <a href="https://fishing-6j9.pages.dev/3kh0-assets-main-tiny-fishing/3kh0-assets-main-tiny-fishing/tiny-fishing" class="game-button">Tiny Fishing</a>
+    <a href="https://egg-2ff.pages.dev/3kh0-assets-main-fnaw/3kh0-assets-main-fnaw/fnaw" class="game-button">Five Nights at Winstons</a>
+    <a href="https://space-3yj.pages.dev/3kh0-assets-main-space-company/space-company" class="game-button">Space Company</a>
+    <a href="https://rope-b45.pages.dev/3kh0-assets-main-ctr/ctr" class="game-button">Cut the Rope</a>
+    <a href="https://pixel-erc.pages.dev/3kh0-assets-main-paperio2/3kh0-assets-main-paperio2/paperio2" class="game-button">Paper.io 2</a>
+    <a href="https://burger-a2o.pages.dev/3kh0-assets-main-papasburgeria/3kh0-assets-main-papasburgeria/papasburgeria" class="game-button">Papa's Burgeria</a>
+    <a href="https://pizza-d1n.pages.dev/3kh0-assets-main-papaspizzaria/3kh0-assets-main-papaspizzaria/papaspizzaria" class="game-button">Papa's Pizzeria</a>
+    <a href="https://paper-eno.pages.dev/3kh0-assets-main-papery-planes/3kh0-assets-main-papery-planes/papery-planes" class="game-button">Papery Planes</a>
+    <a href="https://https://hook-44n.pages.dev/3kh0-assets-main-stickman-hook/3kh0-assets-main-stickman-hook/stickman-hook/" class="game-button">Stickman Hook</a>
+    <a href="https://stick-6ml.pages.dev/3kh0-assets-main-stickman-boost/stickman-boost" class="game-button">Stickman Boost</a>
+    <a href="https://truck-7c3.pages.dev/3kh0-assets-main-cluster-rush/3kh0-assets-main-cluster-rush/cluster-rush" class="game-button">Cluster Rush</a>
+    <a href="https://block-024.pages.dev/3kh0-assets-main-bloxors/3kh0-assets-main-bloxors/bloxors" class="game-button">Bloxorz</a>
+    <a href="https://blockwork.pages.dev/reunbozdo.github.io-main/reunbozdo.github.io-main" class="game-button">Block Blast</a>
+    <a href="https://drift-dtw.pages.dev" class="game-button">Drift Boss</a>
+    <a href="https://unblocked-games.s3.amazonaws.com/index.html" class="game-button">Freezenova</a>
+    <a href="https://wxstbound.global.ssl.fastly.net" class="game-button">Szvy Central</a>
+  </div>
+
+  <script>
+    function filterGames() {
+      const searchInput = document.getElementById('search-bar').value.toLowerCase();
+      const games = document.querySelectorAll('.game-button');
+      
+      games.forEach(game => {
+        const gameText = game.textContent.toLowerCase();
+        game.style.display = gameText.includes(searchInput) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
